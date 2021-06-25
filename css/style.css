@@ -1,14 +1,97 @@
-.wrapper{width: 100%; height: auto; _overflow: hidden;}
+.header_scroll{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  margin: 20px 0;}
 
-/* Section Style Code */
-section{width: 100%; height: auto;}
-section div.one-layout{width: 100%; height: 100px; background:#999;}
-section div.two-layout{width: 100%; height: auto; display: flex; flex-wrap: wrap;}
-section div.two-layout>div{width: 50%;height: 100px; border: 1px solid;_float: left;}
 
-section div.four-layout{width: 100%; height: auto; display: flex; flex-wrap: wrap;}
-section div.four-layout>div{width: 25%;height: 100px; border: 1px solid; _float: left;}
+.header_scroll #logo{margin-left: 40px; top: 15px;}
+.header_scroll .dp_menu{z-index: 10;}
+.header_scroll .dp_menu a i{font-size:40px; margin-right:40px;font-size: 30px; top: 15px; z-index: 100;
+ color: #303030;}
 
-header{width: 100%; height: 30px; position: fixed; background: transparent;}
-div {width: 100%; height: 300px; background: yellow;}
-div.main-video{width: 100%;}
+ 
+.header_scroll .dropdown_menu{
+  padding: 80px 0 0 0;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  text-align: center;
+  width: 50%;
+  height: 100%;
+  background: tomato;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  }
+
+  .header_scroll .dropdown_menu li{  
+    padding: 0 100px 0 100px;  
+    height: 100px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    cursor: pointer;
+    -webkit-animation: ani2 0.7s steps(70) forwards;
+    animation: ani2 0.7s steps(70) forwards;
+    transition: 0.5s;
+ }
+ @mixin button($bcolor,
+ $url,
+ $x1,
+ $y1,
+ $bor,
+ $col) {
+  background: $bcolor;
+  -webkit-mask: url($url);
+  mask: url($url);
+  -webkit-mask-size: $x1 $y1;
+  mask-size: $x1 $y1;
+  border: $bor;
+  color: $col;
+ }
+@keyframes ani{
+	from {
+		-webkit-mask-position: 0 0;
+		mask-position: 0 0;
+	}
+
+	to {
+		-webkit-mask-position: 100% 0;
+		mask-position: 100% 0;
+	}
+}
+
+/* .header_scroll .dropdown_menu li {
+		-webkit-animation: ani2 0.7s steps(70) forwards;
+animation: ani2 0.7s steps(70) forwards;
+} */
+.header_scroll .dropdown_menu li:hover {
+	-webkit-animation: ani 0.7s steps(70) forwards;
+	animation: ani 0.7s steps(70) forwards;
+	}
+
+.header_scroll .dropdown_menu li a{
+    height: 100px;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    font-size: 25px; 
+    line-height: 5px;}
+
+#main_contents{width: 100%;_margin:0px;_padding:0px;_overflow:hidden}
+#main_contents .performance iframe{
+  width: 100%;
+  height: 707px;
+  top: 0;
+  left: 0;
+  }
