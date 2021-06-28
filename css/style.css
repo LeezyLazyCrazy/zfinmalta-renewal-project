@@ -7,12 +7,14 @@
   margin: 20px 0;}
 
 
-.header_scroll #logo{margin-left: 40px; top: 15px;}
-.header_scroll .dp_menu{z-index: 10;}
-.header_scroll .dp_menu a i{font-size:40px; margin-right:40px;font-size: 30px; top: 15px; z-index: 100;
- color: #303030;}
+.header_scroll #logo{margin-left: 40px; _top: 15px;}
+ /* #logo h1 img{width: 100%; height: 100%;} */
+.header_scroll .dp_menu{z-index: 10; _font-size: 40px;}
+.header_scroll .dp_menu a i{ margin-right:40px;font-size: 35px; top: 15px; z-index: 100;
+ color: #303030; border: 1.5px solid #303030; padding:4px;}
 
- 
+.header_scroll .dp_menu a i:hover{color: #ffe600;}
+
 .header_scroll .dropdown_menu{
   padding: 80px 0 0 0;
   position: fixed;
@@ -21,7 +23,7 @@
   text-align: center;
   width: 50%;
   height: 100%;
-  background: tomato;
+  background:black;
   display: none;
   justify-content: center;
   align-items: center;
@@ -29,6 +31,11 @@
   }
 
   .header_scroll .dropdown_menu li{  
+    color: black;
+    margin: 0;
+    border: 0;
+    vertical-align: baseline;
+    outline: 0;
     padding: 0 100px 0 100px;  
     height: 100px;
     display:flex;
@@ -39,42 +46,85 @@
     cursor: pointer;
     -webkit-animation: ani2 0.7s steps(70) forwards;
     animation: ani2 0.7s steps(70) forwards;
-    transition: 0.5s;
+    transition: 0.5s; 
  }
- @mixin button($bcolor,
- $url,
- $x1,
- $y1,
- $bor,
- $col) {
-  background: $bcolor;
-  -webkit-mask: url($url);
-  mask: url($url);
-  -webkit-mask-size: $x1 $y1;
-  mask-size: $x1 $y1;
-  border: $bor;
-  color: $col;
- }
-@keyframes ani{
-	from {
-		-webkit-mask-position: 0 0;
-		mask-position: 0 0;
-	}
-
-	to {
-		-webkit-mask-position: 100% 0;
-		mask-position: 100% 0;
-	}
+ .mas {
+  position: absolute;
+  color: #fff;
+  text-align: center;
+  width: 101%;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 11px;
+  margin-top: 17px;
+  overflow: hidden;
+  font-weight: bold;
 }
 
-/* .header_scroll .dropdown_menu li {
-		-webkit-animation: ani2 0.7s steps(70) forwards;
-animation: ani2 0.7s steps(70) forwards;
-} */
+@-webkit-keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+ }
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+ }
+}
+@keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+ }
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+ }
+}
+
+.dropdown_menu {
+  position: relative;
+  width: 100px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  transition: 0.5s;
+  letter-spacing: 1px;
+}
+.dropdown_menu button {
+  width: 101%;
+  height: 100%;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 11px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  background:#fff;
+  -webkit-mask: url("https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png");
+  mask: url("https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png");
+  -webkit-mask-size: 7100% 100%;
+  mask-size: 7100% 100%;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  -webkit-animation: ani2 0.7s steps(70) forwards;
+  animation: ani2 0.7s steps(70) forwards;
+}
+
 .header_scroll .dropdown_menu li:hover {
 	-webkit-animation: ani 0.7s steps(70) forwards;
 	animation: ani 0.7s steps(70) forwards;
 	}
+
+.header_scroll .dropdown_menu button:hover {
+  -webkit-animation: ani 0.7s steps(70) forwards;
+  animation: ani 0.7s steps(70) forwards;
+}
+
+
 
 .header_scroll .dropdown_menu li a{
     height: 100px;
@@ -86,12 +136,16 @@ animation: ani2 0.7s steps(70) forwards;
     text-align: center;
     flex-direction: column;
     font-size: 25px; 
-    line-height: 5px;}
+    line-height: 5px;
+    color: #ffe600;
+    background:black
+  }
 
-#main_contents{width: 100%;_margin:0px;_padding:0px;_overflow:hidden}
-#main_contents .performance iframe{
+#video_content{width: 100%;_margin:0px;_padding:0px;_overflow:hidden}
+#video_content .performance iframe{
   width: 100%;
   height: 707px;
   top: 0;
   left: 0;
   }
+
