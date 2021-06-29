@@ -15,11 +15,26 @@
 
 .header_scroll .dp_menu a i:hover{color: #ffe600;}
 
+/* 기능추가 */
+/* .dropdown_menu {
+  position: relative;
+  width: 100px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  transition: 0.5s;
+  letter-spacing: 1px;
+} */
+
 .header_scroll .dropdown_menu{
-  padding: 80px 0 0 0;
+  padding: 20px 0 0 0;
   position: fixed;
+  position: relative;
   top: 0px;
-  left: 0px;
+  left: 25%;
   text-align: center;
   width: 50%;
   height: 100%;
@@ -28,6 +43,10 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
+  /* 기능추가  */
+  transition: 0.5s;
+  overflow: hidden;
   }
 
   .header_scroll .dropdown_menu li{  
@@ -48,17 +67,32 @@
     animation: ani2 0.7s steps(70) forwards;
     transition: 0.5s; 
  }
- .mas {
-  position: absolute;
+ .header_scroll .dropdown_menu li .mas {
+  /* position: absolute;
   color: #fff;
   text-align: center;
   width: 101%;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
-  font-size: 11px;
-  margin-top: 17px;
+  font-size: 27px;
+  margin-top: -102px;
   overflow: hidden;
-  font-weight: bold;
+  font-weight: bold; */
+  height: 100px;
+  word-spacing: 7px;
+  letter-spacing: 7px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  font-size: 27px; 
+  line-height: 5px;
+  color: #fff;
+  background:black
+ 
+
+
 }
 
 @-webkit-keyframes ani {
@@ -82,18 +116,6 @@
  }
 }
 
-.dropdown_menu {
-  position: relative;
-  width: 100px;
-  height: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
-  font-family: 'Lato', sans-serif;
-  font-weight: 300;
-  transition: 0.5s;
-  letter-spacing: 1px;
-}
 .dropdown_menu button {
   width: 101%;
   height: 100%;
@@ -124,28 +146,73 @@
   animation: ani 0.7s steps(70) forwards;
 }
 
-
-
 .header_scroll .dropdown_menu li a{
     height: 100px;
-    word-spacing: 1px;
-    letter-spacing: 1px;
+    word-spacing: 7px;
+    letter-spacing: 7px;
     display:flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     flex-direction: column;
-    font-size: 25px; 
+    font-size: 27px; 
     line-height: 5px;
     color: #ffe600;
     background:black
   }
-
+  
 #video_content{width: 100%;_margin:0px;_padding:0px;_overflow:hidden}
+#video_content .performance {width: 100%;}
 #video_content .performance iframe{
   width: 100%;
   height: 707px;
   top: 0;
   left: 0;
-  }
 
+  /* 추가 06/29 */
+  text-align: center;
+  background-position: center center;
+  margin-left: -15px;
+  margin-right: -15px;
+  }
+#view_content{background-position: center; position: relative;
+padding-top:7%;padding-bottom: 5%;}
+#view_content .view_text{}
+
+/* Foooter Sytle Css */
+  footer {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    z-index: 100;
+    position: relative;
+    margin: 20px auto;
+    background: black;
+    padding: 1px 50px;
+}
+.footer_bar{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  background: black;
+
+}
+.footer_bar .footer_logo{}
+.footer_bar .footer_sns{display: flex;}
+.footer_bar .footer_sns span{width:30px; height: 30px; border: 1px solid #ffe600;
+justify-content: center;align-items: center; margin: 3px;}
+.footer_bar .footer_sns i{margin: 10px; display: block;}
+.footer_bottom {
+display: flex;
+justify-content: center;
+font-size: 12px;
+font-weight: 600;
+margin-bottom: 10px;
+background: black;
+}
+footer .footer_bottom a{
+  color: #5b5b5b;
+  background: black;
+}
