@@ -32,7 +32,6 @@
 .header_scroll .dropdown_menu{
   padding: 20px 0 0 0;
   position: fixed;
-  position: relative;
   top: 0px;
   left: 25%;
   text-align: center;
@@ -160,7 +159,7 @@
     color: #ffe600;
     background:black
   }
-  
+#player {max-width: 100%!important;}  
 #video_content{width: 100%;_margin:0px;_padding:0px;_overflow:hidden}
 #video_content .performance {width: 100%;}
 #video_content .performance iframe{
@@ -175,9 +174,133 @@
   margin-left: -15px;
   margin-right: -15px;
   }
-#view_content{background-position: center; position: relative;
-padding-top:7%;padding-bottom: 5%;}
-#view_content .view_text{}
+#view_content{    
+  background-position: center;
+  position: relative;
+  padding-top: 7%;
+  padding-bottom: 5%;
+  justify-content: center;
+  align-items: center;
+  display: flex;}
+
+#view_content .view_text{  
+  padding: 20px 50px;  
+  font-family: Montserrat;
+  font-size: 13px;
+  line-height: 30px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  color: rgb(255, 230, 0);
+  border-color: rgb(0, 0, 0);
+  border-width: 2px;
+  background-color: rgb(48, 48, 48);}
+#view_content .button_txt{
+  position: relative;
+  display: block;
+  line-height: inherit;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 13px;
+  line-height: 30px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  color: rgb(255, 230, 0);
+}
+
+#view_content .view_separator{
+  background-color: #303030;
+  height: 2px;
+  position: relative;
+  width: 22px;
+  display: block;
+  margin: 10px auto 20px;
+}
+
+#box_content{
+  display: block;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+}
+#box_content .up_box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+#box_content .up_box span{font-size: 30px; color: black;
+  background-color: #ffe600; padding: 15px;
+  font-family: 'Unna';
+  font-style: italic;
+  font-weight: normal;
+  border: none;
+  background: #ffe600;
+  color: #000000;
+}
+#box_content .up_text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#box_content .up_text p{font-size: 50px;padding-bottom: 20px;}
+
+#calendar{
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  flex-direction: row;
+  height: 436px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+#calendar .cal_box1{height:100%;background-color:lightgray;padding: 40px 35px;}
+#calendar .cal_box2{height:100%;background-color:lightgray;padding: 40px 35px;}
+#calendar .cal_box3{height:100%;background-color:lightgray;padding: 40px 35px;}
+#calendar i{font-size: 35px; color: black;}
+#calendar h2{margin-top:15px; font-weight: 700;text-align: left;}
+#calendar h3{margin-top:10px;font-weight: 700; font-size: 15px;text-align: left; line-height: 30px; letter-spacing: 0.6px;}
+#calendar img{margin-top:30px;width: 217px; height: 145px;}
+
+#repertoire{
+  display: block;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding-top:60px;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+  
+}
+#repertoire .up_box{
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 30px;
+}
+
+#repertoire .up_box span{font-size: 30px; color: black;
+  background-color: #ffe600; padding: 15px;
+  font-family: 'Unna';
+  font-style: italic;
+  font-weight: normal;
+  border: none;
+  background: #ffe600;
+  color: #000000;
+}
+#repertoire .up_text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+#repertoire .up_text p{font-size: 50px;padding-bottom: 20px;}
+
+
 
 /* Foooter Sytle Css */
   footer {
