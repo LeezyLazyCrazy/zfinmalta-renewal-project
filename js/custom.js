@@ -19,12 +19,28 @@ $(function(){
       
       //4. winTop 값이 headerTop보다 같거나 클때 sticky 클래스 추가 및 제거
       if(winTop >= headerTop){
-        $("header").addClass("sticky");
+        $("header").addClass("sticky","background: white;");
       } else {
-        $("header").removeClass("sticky");
+        $("header").removeClass("sticky","background: transparent;");
       }
     });
   }
+
+
+  const header = document.querySelector(".header_scroll");
+  const headerHeight = header.getBoundingClientRect().height;
+   
+  window.addEventListener("scroll", () => {
+        if (window.scrollY > headerHeight) {
+        header.setAttribute("style", "background: white;");
+     } else {
+        
+  header.setAttribute("style", "background: transparent;");
+     }
+  });
+
+
+
 
   headerSticky();
 
@@ -64,13 +80,20 @@ $(function(){
 // X버튼 눌렀을 때 : 메뉴버튼 나타남/ 메뉴 사라짐
 // //3.'
 
-// function clickEvt(){
-//   if()
-// }
-
-// menu.addEventListener("click",function(){
-//   if(){
-//  메뉴버튼을 없애고 = X버튼을 나타낸다
-//  메뉴 드롭다운 실행
-//   }
+// $(function(){
+//   var $header = $('header'); //헤더를 변수에 넣기
+//   var $page = $('#video_content'); //색상이 변할 부분
+//   var $window = $(window);
+//   var pageOffsetTop = $page.offset().top;//색상 변할 부분의 top값 구하기
+  
+//   $window.resize(function(){ //반응형을 대비하여 리사이즈시 top값을 다시 계산
+//     pageOffsetTop = $page.offset().top;
+//   });
+  
+//   $window.on('scroll', function(){ //스크롤시
+//     var scrolled = $window.scrollTop() >= pageOffsetTop; //스크롤된 상태; true or false
+//     $header.toggleClass('down', scrolled); //클래스 토글
+//   });
 // });
+$("iframe").contents().find("element-selector").css("width", "100%");
+

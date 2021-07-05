@@ -4,30 +4,17 @@
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  margin: 20px 0;}
+  margin-top: 30px;
+ }
 
 
 .header_scroll #logo{margin-left: 40px; _top: 15px;}
  /* #logo h1 img{width: 100%; height: 100%;} */
 .header_scroll .dp_menu{z-index: 10; _font-size: 40px;}
-.header_scroll .dp_menu a i{ margin-right:40px;font-size: 35px; top: 15px; z-index: 100;
+.header_scroll .dp_menu a i{margin-right:40px;font-size: 35px; top: 15px; z-index: 100;
  color: #303030; border: 1.5px solid #303030; padding:4px;}
 
 .header_scroll .dp_menu a i:hover{color: #ffe600;}
-
-/* 기능추가 */
-/* .dropdown_menu {
-  position: relative;
-  width: 100px;
-  height: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
-  font-family: 'Lato', sans-serif;
-  font-weight: 300;
-  transition: 0.5s;
-  letter-spacing: 1px;
-} */
 
 .header_scroll .dropdown_menu{
   padding: 20px 0 0 0;
@@ -67,16 +54,6 @@
     transition: 0.5s; 
  }
  .header_scroll .dropdown_menu li .mas {
-  /* position: absolute;
-  color: #fff;
-  text-align: center;
-  width: 101%;
-  font-family: 'Lato', sans-serif;
-  font-weight: 300;
-  font-size: 27px;
-  margin-top: -102px;
-  overflow: hidden;
-  font-weight: bold; */
   height: 100px;
   word-spacing: 7px;
   letter-spacing: 7px;
@@ -89,9 +66,6 @@
   line-height: 5px;
   color: #fff;
   background:black
- 
-
-
 }
 
 @-webkit-keyframes ani {
@@ -159,11 +133,11 @@
     color: #ffe600;
     background:black
   }
-#player {max-width: 100%!important;}  
-#video_content{width: 100%;_margin:0px;_padding:0px;_overflow:hidden}
-#video_content .performance {width: 100%;}
+#player {max-width: 100vw!important;}  
+#video_content{width: 100vw!important;_margin:0px;_padding:0px;_overflow:hidden}
+#video_content .performance {width: 100vw!important;}
 #video_content .performance iframe{
-  width: 100%;
+  width: 100vw!important;
   height: 707px;
   top: 0;
   left: 0;
@@ -191,21 +165,11 @@
   font-weight: 700;
   letter-spacing: 0.6px;
   color: rgb(255, 230, 0);
-  border-color: rgb(0, 0, 0);
-  border-width: 2px;
-  background-color: rgb(48, 48, 48);}
-#view_content .button_txt{
-  position: relative;
-  display: block;
-  line-height: inherit;
-  text-align: center;
-  font-family: Montserrat;
-  font-size: 13px;
-  line-height: 30px;
-  font-weight: 700;
-  letter-spacing: 0.6px;
-  color: rgb(255, 230, 0);
-}
+  border: 2px solid #000000;
+  background-color: #5b5b5b;}
+
+#view_content .view_text:hover{background-color: #ffe600;color:#000000;}
+
 
 #view_content .view_separator{
   background-color: #303030;
@@ -258,9 +222,13 @@
   padding-left: 10%;
   padding-right: 10%;
 }
+
 #calendar .cal_box1{height:100%;background-color:lightgray;padding: 40px 35px;}
 #calendar .cal_box2{height:100%;background-color:lightgray;padding: 40px 35px;}
 #calendar .cal_box3{height:100%;background-color:lightgray;padding: 40px 35px;}
+#calendar .cal_box1:hover{background-color: #ffe600;}
+#calendar .cal_box2:hover{background-color: #ffe600;}
+#calendar .cal_box3:hover{background-color: #ffe600;}
 #calendar i{font-size: 35px; color: black;}
 #calendar h2{margin-top:15px; font-weight: 700;text-align: left;}
 #calendar h3{margin-top:10px;font-weight: 700; font-size: 15px;text-align: left; line-height: 30px; letter-spacing: 0.6px;}
