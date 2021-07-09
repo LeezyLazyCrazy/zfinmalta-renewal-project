@@ -18,6 +18,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.0/css/ionicons.min.css">
 
+  <!-- Full Page Plugin Link -->
+  <link rel="stylesheet" href="fullpage_lib/jquery.fullpage.css">
   <!-- style Frameworks -->
 
   <!-- Custom Styles -->
@@ -27,16 +29,20 @@
 </head>
 
 <body>
-  <section id="wrap">
+  <section id="wrap" class="fullpage">
+    <div class="overlay"></div>
     <!-- Header Area ------------------------------------------------------------------------------------>
     <header class="header_scroll">
-      <div id="logo">
-        <h1><img src="./img/LogoZfinMalta.svg"></h1>
+     <div class="headerbox">
+       <div id="logo">
+          <h1><img src="./img/LogoZfinMalta.svg"></h1>
       </div>
 
-      <div class="dp_menu">
-        <a href="#"><i class="fa fa-bars"></i></a>
+        <div class="dp_menu">
+          <a href="#"><i class="fa fa-bars"></i></a>
       </div>
+    </div> 
+      
 
       <ul class="dropdown_menu">
         <li>
@@ -64,10 +70,8 @@
     <!-- Main contents ---------------------------------------------------------------------------------->
     <section id="video_content">
       <div class="performance">
-        <iframe src="https://player.vimeo.com/video/412422937?controls=0&autoplay=1&muted=1&loop=1" frameborder="0"
-         width="100vw" height="707px" marginwidth
-          allowfullscreen="0">
-        </iframe>
+        <video autoplay muted loop allowfullscreen="true">
+        <source src="./img/mainVideo.mp4"></video>
       </div>
     </section>
     <section id="view_content"> 
@@ -154,13 +158,18 @@
        <div class="footer_bottom">
          <a href="https://www.zfinmalta.org/privacy-policy/">Privacy Policy</a>
          <a href="https://www.zfinmalta.org/wp-content/uploads/2021/02/ŻfinMalta_Accessibility_Statement.pdf" target="_blank" rel="noopener">Accessibility Statement</a>
-         <a href="http://www.rightbrain.com.mt" target="_blank" rel="noopener">RightBrain</a>
+         <a href="http://www.rightbrain.com.mt" target="_blank" rel="noopener">Website by Leezy</a>
         </div>
      </footer> 
    
-
+<!-- Full Page Plugin Load -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="fullpage_lib/jquery.fullpage.js"></script>
+    <script src="js/fullpage_code.js"></script>
     <script src="./js/custom.js"></script>
+
+    <script src="/static/js/jsdom-16.3.0.min.js"></script>
+    
     
   
   </section>
