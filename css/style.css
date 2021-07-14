@@ -19,10 +19,10 @@
 
 .header_scroll #logo{margin-left: 6%; z-index:9999;}
 .header_scroll .dp_menu{margin-right:6%; _z-index: 10; _font-size: 40px;}
-.header_scroll .dp_menu a i{font-size: 35px; top: 15px; _z-index: 100;
+.header_scroll .dp_menu span i{font-size: 35px; top: 15px; _z-index: 100;
  color: #303030; border: 1.5px solid #303030; padding:4px;}
 
-.header_scroll .dp_menu a i:hover{color: #ffe600;}
+.header_scroll .dp_menu span i:hover{color: #ffe600;}
 
 .header_scroll .dropdown_menu{
   padding: 20px 0 0 0;
@@ -61,41 +61,6 @@
     animation: ani2 0.7s steps(70) forwards;
     transition: 0.5s; 
  }
- .header_scroll .dropdown_menu li .mas {
-  height: 100px;
-  word-spacing: 7px;
-  letter-spacing: 7px;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
-  font-size: 27px; 
-  line-height: 5px;
-  color: #fff;
-  background:black
-}
-
-@-webkit-keyframes ani {
-  from {
-    -webkit-mask-position: 0 0;
-    mask-position: 0 0;
- }
-  to {
-    -webkit-mask-position: 100% 0;
-    mask-position: 100% 0;
- }
-}
-@keyframes ani {
-  from {
-    -webkit-mask-position: 0 0;
-    mask-position: 0 0;
- }
-  to {
-    -webkit-mask-position: 100% 0;
-    mask-position: 100% 0;
- }
-}
 
 .dropdown_menu button {
   width: 101%;
@@ -106,25 +71,18 @@
   letter-spacing: 1px;
   font-weight: bold;
   background:#fff;
-  -webkit-mask: url("https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png");
-  mask: url("https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png");
-  -webkit-mask-size: 7100% 100%;
-  mask-size: 7100% 100%;
   border: none;
   color: #fff;
   cursor: pointer;
-  -webkit-animation: ani2 0.7s steps(70) forwards;
-  animation: ani2 0.7s steps(70) forwards;
+ 
 }
 
 .header_scroll .dropdown_menu li:hover {
-	-webkit-animation: ani 0.7s steps(70) forwards;
-	animation: ani 0.7s steps(70) forwards;
+
 	}
 
 .header_scroll .dropdown_menu button:hover {
-  -webkit-animation: ani 0.7s steps(70) forwards;
-  animation: ani 0.7s steps(70) forwards;
+
 }
 
 .header_scroll .dropdown_menu li a{
@@ -141,6 +99,7 @@
     color: #ffe600;
     background:black
   }
+
 
 #video_content{width: 100vw!important;margin:0px;padding:0px;overflow:hidden; z-index: -1;}
 #video_content .performance {width: 100vw;}
@@ -178,7 +137,7 @@
   border: 2px solid #000000;
   background-color: #5b5b5b;}
 
-#view_content .view_text:hover{background-color: #ffe600;color:#000000;}
+#view_content .view_program .view_text:hover{background-color: #ffe600;color:#000000;}
 
 
 #view_content .view_separator{
@@ -282,69 +241,21 @@ padding: 30px;
 
 #repertoire .up_text p{font-size: 50px;padding-bottom: 20px;}
 
-.re_slide{
-  position: relative; 
-  background-position: center ;
-  background-repeat: no-repeat ;
-  background-size: cover ;}
-
-.re_slide .choreobox1 {
-  width: 100%;
-  height: 300px;
-  background-color: orange;
-  transition: all 0.5s linear;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
-}
-
-.re_slide .choreobox2 {
-  width: 100%;
-  height: 300px;
-  margin: 50px auto;
-  padding: 20px;
-  background-color: orange;
-  transition: all 0.5s linear;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
-}
-
-.re_slide .choreobox3 {
-  width: 100%;
-  height: 300px;
-  margin: 50px auto;
-  padding: 20px;
-  background-color: orange;
-  transition: all 0.5s linear;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
-}
+/* Slider Section Style Code */
+.slider{width:100%; _height:60vh; background:#efefef; padding:0;}
+.slider .center{display:flex; justify-content: space-between; align-items: center;}
+.slider .slider_txt{
+  position: absolute;  z-index: 100; right: 690px;
+  width: 400px;
+  height: 400px;
+  background: #3030307e;
+  border-radius: 50%}
+.slider .slider_txt h2{font-size:50px; font-weight:500;color:#ffe600;text-align:center;top:10px;margin-top: 30px;}
+.slider .slider_txt h3{font-size:35px; font-weight:300;margin-top: 50px;}
+.slider .slider_img{height:60vh;position: relative; left: 230px; background: cover;}
+.slider .center .slider_img img{height:100%;}
 
 
-
-.re_slide img{
- width: 200px;
- height: 200px;
-}
-
-
-/* .re_slide .choreobox1 img:hover {
-  transform: scale( 1.5 )
-}
-.re_slide .choreobox2 img:hover {
-  transform: scale( 1.5 )
-}
-.re_slide .choreobox3 img:hover {
-  transform: scale( 1.5 )
-} */
 
 
 /* Foooter Sytle Css */
@@ -402,3 +313,5 @@ footer .footer_bottom a{
 
 footer .footer_bottom a:nth-child(2){border-left: 1px solid #5b5b5b;}
 footer .footer_bottom a:nth-child(3){border-left: 1px solid #5b5b5b;}
+
+.wrap_2{height: 100vh; width: 100%;}

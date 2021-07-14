@@ -18,9 +18,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.0/css/ionicons.min.css">
 
-  <!-- Full Page Plugin Link -->
-  <link rel="stylesheet" href="fullpage_lib/jquery.fullpage.css">
-  <!-- style Frameworks -->
+ <!-- Light Slider Plugin Link -->
+ <link rel="stylesheet" href="/renewal/lib/lightslider.css">
 
   <!-- Custom Styles -->
   <link rel="stylesheet" href="/renewal/css/reset.css">
@@ -29,7 +28,7 @@
 </head>
 
 <body>
-  <section id="wrap" class="fullpage">
+  <section id="wrap">
     <div class="overlay"></div>
     <!-- Header Area ------------------------------------------------------------------------------------>
     <header class="header_scroll">
@@ -38,79 +37,86 @@
           <h1><img src="./img/LogoZfinMalta.svg"></h1>
       </div>
 
-        <div class="dp_menu">
-          <a href="#"><i class="fa fa-bars"></i></a>
+    <div id="myNav" class="dp_menu">
+        <span style="cursor: pointer;"onclick="openNav()">
+          <i class="fa fa-bars"></i>
+        </span>
       </div>
     </div> 
       
+      <div class="dropdown_menu">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;"></a>
+          <a href="#">THE COMPANY</a>
+          <a href="#">REPERTOIRE</a>
+          <a href="#">CALENDAR</a>
+          <a href="#">ARTIST IN RESIDENCE</a>    
+          <a href="#">SUPPORT US</a>
+          <a href="#">CONTACT</a>
+      </div>
+      <script>
+      /* Open */
+        function openNav() {
+          document.getElementById("myNav").style.height = "100%";
+        }
 
-      <ul class="dropdown_menu">
-        <li>
-          <span class="mas">THE COMPANY</span>
-          <button><a href="#">THE COMPANY</a></button></li>
-        <li>
-          <span class="mas">REPERTOIRE</span>
-          <button><a href="#">REPERTOIRE</a></button></li>
-        <li>
-          <span class="mas">CALENDAR</span>
-          <button><a href="#">CALENDAR</a></button></li>
-        <li>
-          <span class="mas">ARTIST IN RESIDENCE</span>
-          <button><a href="#">ARTIST IN RESIDENCE</a></button></li>
-        <li>
-          <span class="mas">SUPPORT US</span>
-          <button><a href="#">SUPPORT US</a></button></li>
-        <li>
-          <span class="mas">CONTACT</span>
-          <button><a href="#">CONTACT</a></button></li>
-      </ul>
+      /* Close */
+        function closeNav() {
+          document.getElementById("myNav").style.height = "0%";
+        }
+      </script>
     </header>
     <!-- End of Header Area ----------------------------------------------------------------------------->
     
     <!-- Main contents ---------------------------------------------------------------------------------->
+      <!-- Page 1 -->
     <section id="video_content">
       <div class="performance">
         <video autoplay muted loop allowfullscreen="true">
         <source src="./img/mainVideo.mp4"></video>
       </div>
     </section>
-    <section id="view_content"> 
-      <div class="view_program">
-        <div class="view_text" onclick="window.open('https:www.zfinmalta.org/wp-content/uploads/2020/10/ZFINMALTA-20_21-SEASON-PROGRAMME-LR.pdf')">
-          VIEW OUR FULL SEASON PROGRAMME
+     <!-- Page 2 -->
+
+      <section id="view_content"> 
+        <div class="view_program">
+          <div class="view_text" onclick="window.open('https:www.zfinmalta.org/wp-content/uploads/2020/10/ZFINMALTA-20_21-SEASON-PROGRAMME-LR.pdf')">
+            VIEW OUR FULL SEASON PROGRAMME
+          </div>
+          <div class="view_separator">
+          </div>
         </div>
-        <div class="view_separator">
+      </section> 
+      <section id="box_content">
+        <div class="up_box">
+          <span>What's On</span>
         </div>
-      </div>
-    </section> 
-    <section id="box_content">
-      <div class="up_box">
-        <span>What's On</span>
-      </div>
-      <div class="up_text">
-        <p><strong>UPCOMING</strong></p>
-      </div>
-    </section>
-    <section id="calendar">
-      <div class="cal_box1">
-        <div class="box_icon"><i class="fa fa-bullhorn"></i></div>
-        <div class="box_date"><h2>5-7 JUNE 2021</h2></div>
-        <div class="box_txt"><h3>AUDITIONS FOR<br>COMPANY & APPRENTICE<br>DANCERS</h3></div>
-        <div class="box_pic"><img src="../renewal/img/calbox1.jpg" alt=""></div>
-      </div>
-      <div class="cal_box2">
-        <div class="box_icon"><i class="fa fa-calendar" aria-hidden="true"></i></div>
-        <div class="box_date"><h2>18-20 JUNE 2021</h2></div>
-        <div class="box_txt"><h3>GIRLS & BOYS<br><br><br></div>
-        <div class="box_pic"><img src="../renewal/img/calbox2.jpg" alt=""></div>
-      </div>
-      <div class="cal_box3">
-        <div class="box_icon"><i class="fa fa-calendar" aria-hidden="true"></i></div>
-        <div class="box_date"><h2>JULY 2021</h2></div>
-        <div class="box_txt"><h3>QUARTERS IN MOTION<br><br><br></h3></div>
-        <div class="box_pic"><img src="../renewal/img/calbox3.jpg" alt=""></div>
-      </div>
-    </section>
+        <div class="up_text">
+          <p><strong>UPCOMING</strong></p>
+        </div>
+      </section>
+      <section id="calendar">
+        <div class="cal_box1">
+          <div class="box_icon"><i class="fa fa-bullhorn"></i></div>
+          <div class="box_date"><h2>5-7 JUNE 2021</h2></div>
+          <div class="box_txt"><h3>AUDITIONS FOR<br>COMPANY & APPRENTICE<br>DANCERS</h3></div>
+          <div class="box_pic"><img src="../renewal/img/calbox1.jpg" alt=""></div>
+        </div>
+        <div class="cal_box2">
+          <div class="box_icon"><i class="fa fa-calendar" aria-hidden="true"></i></div>
+          <div class="box_date"><h2>18-20 JUNE 2021</h2></div>
+          <div class="box_txt"><h3>GIRLS & BOYS<br><br><br></div>
+          <div class="box_pic"><img src="../renewal/img/calbox2.jpg" alt=""></div>
+        </div>
+        <div class="cal_box3">
+          <div class="box_icon"><i class="fa fa-calendar" aria-hidden="true"></i></div>
+          <div class="box_date"><h2>JULY 2021</h2></div>
+          <div class="box_txt"><h3>QUARTERS IN MOTION<br><br><br></h3></div>
+          <div class="box_pic"><img src="../renewal/img/calbox3.jpg" alt=""></div>
+        </div>
+      </section>
+     
+      
+     <!-- Page 3 -->
     <section id="repertoire">
       <div class="up_box">
         <span>ZfinMalta</span>
@@ -118,30 +124,65 @@
       <div class="up_text">
        <p><strong>REPERTOIRE</strong></p>
       </div>
-      <div class="re_slide">
-        <div class="choreobox1">
-          <img src="../renewal/img/reslide1.jpg" alt="">
-          <span><H2>DANCES FOR THE 23ST CENTURY</H2>
+
+      <!-- Slider section  -->
+    <section class="slider">
+      <!-- Loop slider Box -->
+      <div class="slide_box">
+        <div class="center slider_wrap">
+          <div class="slider_txt">
+            <H2>DANCES FOR <br>THE 23ST CENTURY</H2>
             <H3>CHOREOGRAPHY BY PAOLO MANGIOLA</H3>
-          </span> 
-        </div>
-        <div class="choreobox2">
-          <img src="../renewal/img/reslide2.jpg" alt="">
-          <span><H2>A MIDSUMMER NIGHT'S DREAM</H2>
-            <H3>CHOREOGRAPHY BY SERGIU MATIS</H3>
-          </span>
-        </div>
-        <div class="choreobox3">
-          <img src="../renewal/img/reslide3.jpg" alt="">
-          <span><H2>GIRLS & BOY</H2>
-            <H3>CHOREOGRAPHY BY ROY ASSAF</H3>
-          </span>
+            </div>
+          <div class="slider_img">
+            <img src="/renewal/img/reslide1.jpg" alt=""> 
+          </div>
         </div>
       </div>
-      <div class="btns">
+      <!-- End of Loop Slider Box -->
+      <!-- Loop slider Box -->
+      <div class="slide_box">
+        <div class="center slider_wrap">
+          <div class="slider_txt">
+            <H2>A  MIDSUMMER <br> NIGHT'S DREAM</H2>
+            <H3>CHOREOGRAPHY BY SERGIU MATIS</H3>
+            </div>
+          <div class="slider_img">
+            <img src="/renewal/img/reslide2.jpg" alt=""> 
+          </div>
+        </div>
+      </div>
+      <!-- End of Loop Slider Box -->
+       <!-- Loop slider Box -->
+       <div class="slide_box">
+        <div class="center slider_wrap">
+          <div class="slider_txt">
+            <H2>GIRLS <br> & <br>BOY</H2>
+            <H3>CHOREOGRAPHY BY ROY ASSAF</H3>
+            </div>
+          <div class="slider_img">
+            <img src="/renewal/img/reslide3.jpg" alt=""> 
+          </div>
+        </div>
+      </div>
+      <!-- End of Loop Slider Box -->         
+    </section>
+    <!-- End of Slider Landing Section -->
+
+
+
+
+
+
+
+
+
+
+
+
       </div>
     </section>
- 
+<!--  End of Main contents ---------------------------------------------------------------------------------->
      <footer>
        <div class="footer_bar">
         <div class="footer_logo">
@@ -162,10 +203,10 @@
         </div>
      </footer> 
    
-<!-- Full Page Plugin Load -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="fullpage_lib/jquery.fullpage.js"></script>
-    <script src="js/fullpage_code.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  
+    <script src="/renewal/lib/lightslider.js"></script>
+    <script src="/renewal/js/slider.js"></script>
     <script src="./js/custom.js"></script>
 
     <script src="/static/js/jsdom-16.3.0.min.js"></script>
