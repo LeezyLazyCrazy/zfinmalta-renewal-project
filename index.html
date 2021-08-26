@@ -14,8 +14,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Unna:ital@0;1&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Sacramento&display=swap" rel="stylesheet">
+
   <!-- Font Awsome Link -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.0/css/ionicons.min.css">
@@ -23,9 +23,11 @@
   <!-- Full Page Plugin Link -->
   <link rel="stylesheet" href="fullpage_lib/jquery.fullpage.css">
  
-  <!-- Custom Styles -->
+  <!-- Reset CSS Link -->
   <link rel="stylesheet" href="/leezy_renewal/css/reset.css">
+  <!-- Main CSS Link -->
   <link rel="stylesheet" href="/leezy_renewal/css/style.css">
+  <!-- Media Query CSS Link -->
   <link rel="stylesheet" href="/leezy_renewal/css/media.css">
 </head>
 
@@ -37,11 +39,11 @@
         <div class="menu">
           <ul>
             <li><a href="#" class="spread-underline">The Company</a></li>
-            <li><a href="#" class="spread-underline">Repertoire</a></li>
-            <li><a href="#" class="spread-underline">Calendar</a></li>
-            <li><a href="#" class="spread-underline">Education & Participation</a></li>
-            <li><a href="#" class="spread-underline">Artist in Residence</a></li>
-            <li><a href="#" class="spread-underline">suppor Us</a></li>
+            <li><a href="#2nd" class="spread-underline">Calendar</a></li>
+            <li><a href="#3rd" class="spread-underline">Repertoire</a></li>
+            <li><a href="#4th" class="spread-underline">Education & Participation</a></li>
+            <li><a href="#4th" class="spread-underline">Artist in Residence</a></li>
+            <li><a href="#4th" class="spread-underline">suppor Us</a></li>
           </ul>
         </div>
         <h2><a href="#"><img src="img/LogoZfinMalta.svg" alt=""></a></h2>
@@ -50,11 +52,14 @@
         </div>
       </div>  
     </header>
+     <!-- Page 1 Section -->
     <section class="vid_section section" data-anchor="1st">
       <video data-autoplay loop muted>
         <source src="img/mainVideo.mp4">
       </video>
     </section>
+     <!-- End of Page 1 Section -->
+      <!-- Page 2 Section -->
     <section class="upcoming section" data-anchor="2nd">
       <div class="center">
         <div class="season_btn">
@@ -113,7 +118,9 @@
         </div>
       </div>
     </section>
+  <!-- End of Page 2 Section -->
 
+  <!-- Page 3 Section -->
     <section class="repertorie section" data-anchor="3rd">
       <div class="center">
         <div class="up_box">
@@ -158,14 +165,17 @@
           </div>
         </div>
              
-      
+        <!-- <div class="slide_arr_btn">
+          <div class="arr_prev"></div>
+          <div class="arr_next"></div>
+        </div> -->
       </div>
     </section>
-
+<!-- End of Page 3 Section -->
   
 
 
-  <!-- 4th page Section -->
+<!--page 4 Section -->
   <section class="EPAR_footer section" data-anchor="4th">
     <div class="center">
       <div class="EPAR">       
@@ -201,12 +211,13 @@
       </div>
   </div>
 </section>
+<!--End of page 4 Section -->
 </div>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="/leezy_renewal/fullpage_lib/jquery.fullpage.js"></script>
   <script src="/leezy_renewal/js/fullpage.js"></script>
-  <script>
+  <!-- <script>
     $(function(){
       $(".m_menu_icon").click(function(){
         $(this).toggleClass('on');
@@ -223,7 +234,33 @@
         }        
       });
     });
+  </script> -->
+   <script>
+    $(function(){
+      $(".m_menu_icon").click(function(){
+        $(this).toggleClass('on');
+        if($(this).hasClass("on")){
+          $(this).find('i').attr('class', 'fa fa-times');
+          $(".menu").slideDown('fast');        
+          if($(".fullpage-wrapper section.active").data("anchor") !== "1st"){
+            $(".menu").css('background', '#white');
+          }
+          $("i").css("color", '#ffe600');
+          $(".m_menu_icon").css("z-index", '9999');
+
+        } else {
+          $(this).find('i').attr('class', 'fa fa-bars');
+          $(".menu").slideUp('fast');
+          $(".menu").css('background', 'unset');
+          $("i").css("color");
+          $("i").css("color", '#000');  
+          $(".m_menu_icon").css("z-index", '9999');     
+        }
+      });
+    });
   </script>
+
+  
 
    
   <!-- Full Page Plugin Load -->
